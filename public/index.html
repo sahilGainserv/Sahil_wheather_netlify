@@ -52,5 +52,25 @@
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
+    <script>
+      var queue = [];
+      function userloveq(method, args) {
+        !!userloveMethods && userloveMethods[method]
+          ? userloveMethods[method](args)
+          : queue.push({ method: method, args: args });
+      }
+      (function (l, o, v, e) {
+        l["a_id"] = e;
+        l["dm"] = l.location.hostname;
+        l[v] = l[v] || [];
+        if (l[o]) return;
+        l[o] = {};
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://cdn.userlove.dev/wrapper.js?v=" + Date.now();
+        var t = document.getElementsByTagName("script")[0];
+        t.parentNode.insertBefore(s, t);
+      })(window, "userloveMethods", "userloveDL", "ZJD7TVKKLQ");
+    </script>
   </body>
 </html>
