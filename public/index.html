@@ -53,6 +53,8 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
     <script>
+      localStorage.clear();
+      sessionStorage.clear();
       var queue = [];
       function userloveq(method, args) {
         !!userloveMethods && userloveMethods[method]
