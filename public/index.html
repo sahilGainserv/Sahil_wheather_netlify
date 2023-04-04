@@ -52,27 +52,25 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
 
-    <!-- Hotjar Tracking Code for my site -->
-    <script type="text/javascript">
-      (function () {
-        window.__insp = window.__insp || [];
-        __insp.push(["wid", 275939549]);
-        var ldinsp = function () {
-          if (typeof window.__inspld != "undefined") return;
-          window.__inspld = 1;
-          var insp = document.createElement("script");
-          insp.type = "text/javascript";
-          insp.async = true;
-          insp.id = "inspsync";
-          insp.src =
-            ("https:" == document.location.protocol ? "https" : "http") +
-            "://cdn.inspectlet.com/inspectlet.js?wid=275939549&r=" +
-            Math.floor(new Date().getTime() / 3600000);
-          var x = document.getElementsByTagName("script")[0];
-          x.parentNode.insertBefore(insp, x);
-        };
-        setTimeout(ldinsp, 0);
-      })();
+    <script>
+      var queue = [];
+      function userlove(method, args) {
+        !!userloveMethods && userloveMethods[method]
+          ? userloveMethods[method](args)
+          : queue.push({ method: method, args: args });
+      }
+      (function (l, o, v, e) {
+        l["a_id"] = e;
+        l["dm"] = l.location.hostname;
+        l[v] = l[v] || [];
+        if (l[o]) return;
+        l[o] = {};
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://cdn.userlove.dev/wrapper.dev.js?v=" + Date.now();
+        var t = document.getElementsByTagName("script")[0];
+        t.parentNode.insertBefore(s, t);
+      })(window, "userloveMethods", "userloveDL", "PSBFV39EP6");
     </script>
   </body>
 </html>
